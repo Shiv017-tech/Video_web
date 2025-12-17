@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* ---------- Banner ---------- */
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.40),
+        rgba(0,0,0,0.40)
+    );
+    overflow: hidden;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* IMPORTANT */
+}
+
+.logo {
+    width: 140px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    background: rgb(9, 236, 232);
+    color: black;
+    transition: 0.4s;
+}
+
+/* ---------- Content ---------- */
+.content {
+    width: 100%;
+    position: absolute;
+    color: #f3f3f3;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-size: 4.5rem; /* responsive base */
+    margin-bottom: 20px;
+}
+
+/* ---------- Button ---------- */
+button {
+    width: 200px;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(2, 255, 255);
+}
+
+/* ---------- Video ---------- */
+.banner video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* ---------- Large Screens ---------- */
+@media (min-aspect-ratio: 16/9) {
+    .banner video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    button {
+        width: 180px;
+        font-size: 16px;
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        margin: 8px 0;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    button {
+        width: 160px;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
